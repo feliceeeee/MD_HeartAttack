@@ -5,8 +5,8 @@ import pandas as pd
 
 # Load preprocess and model from MLflow
 # Load preprocessor
-scaler = joblib.load("artifacts/preprocessor.pkl") # scaler hasil preprocessing
-model = joblib.load("artifacts/model.pkl") # model hasil training
+scaler = joblib.load("preprocessor.pkl") # scaler hasil preprocessing
+model = joblib.load("model.pkl") # model hasil training
 
 continuous_cols = ["age","trestbps","chol","thalach","oldpeak"]
 
@@ -59,4 +59,5 @@ def make_prediction(features):
 
 if __name__ == '__main__':
     main()
+
 
